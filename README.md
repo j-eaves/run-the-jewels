@@ -5,6 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
+# run-the-jewels
+A new revised app for a television show proposal
+
 * Ruby version
 
 * System dependencies
@@ -21,4 +24,3 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
