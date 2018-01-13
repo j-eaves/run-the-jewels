@@ -1,0 +1,2 @@
+module VelocityParallaxHelper
+end
