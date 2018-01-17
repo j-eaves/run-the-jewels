@@ -213,7 +213,7 @@
       position: fixed;
       z-index: 1; /* stays on top/front of everythng shown */
       /*right: 3%;*/
-      right: 1%;
+      right: 3%;
       /* change right to 50% from 3% to move to vertical center of page */
       top: 50%;
       /* change top to 90% from 50% to move to bottom of page */
@@ -233,7 +233,7 @@
       overflow: hidden;
       text-indent: 100%;
       white-space: nowrap;
-      background: url('assets/cd-icon-arrow.svg') no-repeat center center;
+      background: url('/assets/cd-icon-arrow.svg') no-repeat center center;
     }
     .cd-vertical-nav a.cd-prev {
       -webkit-transform: rotate(180deg);
@@ -324,7 +324,8 @@
 	  display: grid;
 	  grid-template-columns: repeat(3, 1fr);
 	  grid-gap: 1px;
-	  grid-auto-rows: minmax(200px, auto);
+	  grid-auto-rows: minmax(230px, auto);
+    padding : 1vh 5vw;
 	}
 	.wrapper iframe {
 		/*width: 300px;*/
@@ -334,7 +335,7 @@
 	.one {
 	  grid-column: 1;
 	  grid-row: 1;
-	  text-align: right;
+	  text-align: center;
 	}
 	.two { 
 	  grid-column: 2;
@@ -344,12 +345,12 @@
 	.three {
 	  grid-column: 3;
 	  grid-row: 1;
-	  text-align: left;
+	  text-align: center;
 	}
 	.four {
 	  grid-column: 1;
 	  grid-row: 2;
-	  text-align: right;
+	  text-align: center;
 	}
 	.five {
 	  grid-column: 2;
@@ -359,9 +360,12 @@
 	.six {
 	  grid-column: 3;
 	  grid-row: 2;
-	  text-align: left;
+	  text-align: center;
 	}
+
+  /*@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);*/
 	.vid-text {
+    font-family: "Josefin Sans", sans-serif;
 	  padding-top: 10px;
 	  text-align: center;
 	}
@@ -416,7 +420,7 @@
       <!-- <iframe src="https://player.vimeo.com/video/249608901?autoplay=1&loop=1&autopause=0" width="640" height="564" frameborder="0" webkitallowfullscreen allowfullscreen mozallowfullscreen ></iframe> -->
     </div>
     <div>
-    	<p style="vertical-align: bottom !important; padding-bottom: 5vh !important; color:#d9480f;">1 ________ The Jewels is a premium, six-part hybrid documentary series and musical event.</p>
+    	<!-- <p style="vertical-align: bottom !important; padding-bottom: 5vh !important; color:#d9480f;">________ The Jewels is a premium, six-part hybrid documentary series and musical event.</p> -->
     </div>
     <!-- https://vimeo.com/250041995/a11be57d52 -->
   </section>
@@ -497,28 +501,28 @@
 	<div class="wrapper" style="padding-top: 70px">
 	  <div class="one">
 	  	<iframe src="https://player.vimeo.com/video/249608901?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"  webkitallowfullscreen allowfullscreen mozallowfullscreen></iframe>
-	  	<div class="vid-text">One</div>
+	  	<div class="vid-text">Enhance The Jewels</div>
 	  </div>
 
 	  <div class="two">
 	  	<iframe src="https://player.vimeo.com/video/249608906?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" ></iframe>
-	  	<div>Two</div>
-	  </div class="vid-text">
+	  	<div class="vid-text">Fuck You The Jewels</div>
+	  </div>
 	  <div class="three">
 	  	<iframe src="https://player.vimeo.com/video/249609059?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">Three</div>
+	  	<div class="vid-text">RAP The Jewels</div>
 	  </div>
 	  <div class="four">
 	  	<iframe src="https://player.vimeo.com/video/249609054?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">Four</div>
+	  	<div class="vid-text">Climate Change The Jewels</div>
 	  </div>
 	  <div class="five">
 	  	<iframe src="https://player.vimeo.com/video/249608910?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">Five</div>
+	  	<div class="vid-text">Crowdfund The Jewels</div>
 	  </div>
 	  <div class="six">
 	  	<iframe src="https://player.vimeo.com/video/249608914?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">Six</div>
+	  	<div class="vid-text">Next The Jewels</div>
 	  </div>
 	</div>
 
