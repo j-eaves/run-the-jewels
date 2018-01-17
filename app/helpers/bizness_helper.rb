@@ -1,0 +1,2 @@
+module BiznessHelper
+end
