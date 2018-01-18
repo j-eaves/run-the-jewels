@@ -28,8 +28,9 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
   # config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
   # Do not fallback to assets pipeline if a precompiled asset is missed.
+  #This was how the file was set, originally
   # config.assets.compile = false
-  # config.assets.compile = true
+  #This fix was from https://stackoverflow.com/questions/21974190/background-image-not-showing-up-in-heroku
   config.serve_static_files = true
   config.assets.compile = true
 
