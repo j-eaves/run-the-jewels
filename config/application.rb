@@ -13,7 +13,7 @@ module Runthejewels03
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     # This was added later by me
-    # config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
