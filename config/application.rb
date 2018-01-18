@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# This was added later by me
+config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+
 module Runthejewels03
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
