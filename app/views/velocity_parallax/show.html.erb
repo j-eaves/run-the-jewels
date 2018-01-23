@@ -98,7 +98,7 @@
       position: absolute;
       width: 100%;
       text-align: center;
-      top: 20px;
+      top: 10px;
       z-index: 2;
       font-weight: bold;
       font-size: 1.3rem;
@@ -117,6 +117,14 @@
     .cd-section:nth-of-type(5) > div {
       /*background-color: #f06a59;*/
     }
+    .cd-section:nth-of-type(6) > div {
+      /*background-color: #f06a59;*/
+    }
+    .cd-section:nth-of-type(7) > div {
+      /*The arrow needs to clear the top of the images*/
+      margin-top: 5vh;
+      /*background-color: #f06a59;*/
+    }
     [data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
       background-position: center center;
       background-repeat: no-repeat;
@@ -126,7 +134,7 @@
       background-image: url("assets/img-1.jpg");
     }
     [data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
-      background-image: url("img-1.jpg");
+      background-image: url("assets/img-1.jpg");
     }
     [data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
       background-image: url("img-3.jpg");
@@ -229,13 +237,13 @@
     }
     .cd-vertical-nav a {
       display: block;
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       /* image replace */
       overflow: hidden;
       text-indent: 100%;
       white-space: nowrap;
-      background: url('/assets/cd-icon-arrow.svg') no-repeat center center;
+      background: url('/assets/down-arrow.svg') no-repeat center center;
     }
     .cd-vertical-nav a.cd-prev {
       -webkit-transform: rotate(180deg);
@@ -243,9 +251,9 @@
       -ms-transform: rotate(180deg);
       -o-transform: rotate(180deg);
       transform: rotate(180deg);
-      margin-top: 18vh;
+      margin-top: 20vh;
       /*margin-bottom: 10px;*/
-      margin-bottom: 75vh;
+      margin-bottom: 80vh;
       /* change margin-bottom to 85vh; from 10px; to place at top and bottom of page */
     }
     .cd-vertical-nav a.inactive {
@@ -315,64 +323,88 @@
 
     /* Video Grid Styling */
 
-   .wrapper > div {
-	  border: 5;  solid rgb(233,171,88); 
-	  border-radius: 0;
-	  /*background-color: rgba(0,0,0,0.1);*/
-	  background-color: rgba(0,0,0,0.0);
-	  padding: 6vh 0;
-	  vertical-align: middle;
-	  /*text-align: center;*/
-	}
-	.wrapper {
-	  display: grid;
-	  grid-template-columns: repeat(3, 1fr);
-	  grid-gap: 1px;
-	  grid-auto-rows: minmax(230px, auto);
-    padding : 8vh 5vw;
-	}
-	.wrapper iframe {
-		/*width: 300px;*/
-		width: 25vw;
-		height: 25vh;
-	}
-	.one {
-	  grid-column: 1;
-	  grid-row: 1;
-	  text-align: center;
-	}
-	.two { 
-	  grid-column: 2;
-	  grid-row: 1;
-	  text-align: center;
-	}
-	.three {
-	  grid-column: 3;
-	  grid-row: 1;
-	  text-align: center;
-	}
-	.four {
-	  grid-column: 1;
-	  grid-row: 2;
-	  text-align: center;
-	}
-	.five {
-	  grid-column: 2;
-	  grid-row: 2;
-	  text-align: center;
-	}
-	.six {
-	  grid-column: 3;
-	  grid-row: 2;
-	  text-align: center;
-	}
+    .wrapper > div {
+  	  border: 5;  solid rgb(233,171,88); 
+  	  border-radius: 0;
+  	  /*background-color: rgba(0,0,0,0.1);*/
+  	  background-color: rgba(0,0,0,0.0);
+      /*padding below is just for the tops of all vids*/
+  	  padding: 2vh 0;
+  	  vertical-align: middle;
+  	  /*text-align: center;*/
+  	}
+  	.wrapper {
+  	  display: grid;
+  	  grid-template-columns: repeat(3, 1fr);
+  	  grid-gap: 1px;
+  	  grid-auto-rows: minmax(230px, auto);
+      /*padding below is to bring vids closer together*/
+      padding : 1vh 10vw;
+  	}
+  	.wrapper iframe {
+  		/*width: 300px;*/
+  		width: 25vw;
+  		height: 25vh;
+  	}
+  	.one {
+  	  grid-column: 1;
+  	  grid-row: 1;
+  	  text-align: center;
+  	}
+  	.two { 
+  	  grid-column: 2;
+  	  grid-row: 1;
+  	  text-align: center;
+  	}
+  	.three {
+  	  grid-column: 3;
+  	  grid-row: 1;
+  	  text-align: center;
+  	}
+  	.four {
+  	  grid-column: 1;
+  	  grid-row: 2;
+  	  text-align: center;
+  	}
+  	.five {
+  	  grid-column: 2;
+  	  grid-row: 2;
+  	  text-align: center;
+  	}
+  	.six {
+  	  grid-column: 3;
+  	  grid-row: 2;
+  	  text-align: center;
+  	}
 
-  /*@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);*/
-	.vid-text {
-    font-family: "Josefin Sans", sans-serif;
-	  padding-top: 10px;
-	  text-align: center;
-	}
+    /*@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);*/
+  	.small-vid-text {
+      font-family: "Josefin Sans", sans-serif;
+      padding-top: 10px;
+      text-align: center;
+      color: #ff0000;
+      text-shadow:
+       -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+    }
+    .vid-text {
+      font-family: "Josefin Sans", sans-serif;
+  	  padding-top: 10px;
+  	  text-align: center;
+  	}
+    .vid-text, p {
+      padding-top: 48vh;
+      /*color: #267481;*/
+      /*color: #fff;*/
+      color: #ff0000;
+      text-shadow:
+       -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+    }
 
 	/* Responsive layout - makes a two column-layout instead of four columns */
 	/*@media (max-width: 800px) {
@@ -391,6 +423,71 @@
 	        max-width: 100%;
 	    }
 	}*/
+
+  #slide2 {
+    /*width:100vw;*/
+    /*background-color: #fff;*/
+
+    /* my modification */
+    /*background: url('https://giphy.com/gifs/killer-mike-T5jf3Pa89f5bG') 50% 0 no-repeat fixed;*/
+    background: url('assets/RunTheJewelsOV.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    /* my modification */
+    color: #fff;
+    /*height: 100vh;*/
+    margin: 0;
+    overflow: hidden;
+    /*padding: 300px 0;*/
+    padding: 0 0;
+  }
+  #slide3 {
+    background: url('assets/2018-01-21_13h03_34.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide4 {
+    background: url('assets/Ambulance_LOOP.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide5 {
+    background: url('assets/LOOP_Amb03.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide6 {
+    background: url('assets/LOOP_Amb04.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide7 {
+    background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide8 {
+    background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
 </style>
 
 <!doctype html>
@@ -431,52 +528,51 @@
 
   <section class="cd-section">
     <div>
+      <div id="slide2">
       <!-- <h2>Section 2</h2> -->
       <!-- <h3> THIS IS AN H3 TAG </h3> -->
-      <span>
-      	<p>El-P and Killer Mike of the hip-hop phenominon, Run the Jewels, mash up mediums to deliver socially engaged documentary which seamlessly integrates and features the full canon of their music.</p>
-  	  </span>
+      	<p class="vid-text">El-P and Killer Mike of the hip-hop phenominon, Run the Jewels, mash up mediums to deliver socially engaged documentary which seamlessly integrates and features the full canon of their music.</p>
+      </div>
   	</div>
   </section>
 
   <section class="cd-section">
     <div>
       <!-- <h2>Section 2</h2> -->
-      <!-- <h3> THIS IS AN H3 TAG </h3> -->
-      <span>
-      	<p>ALTERNATE: El-P and Killer Mike of the hip-hop phenominon, Run the Jewels, mash up mediums to deliver socially engaged documentary alongside the premiering of their own original, new music and music videos.</p>
-      </span>
+      <div id="slide3">
+      	<p class="vid-text">ALTERNATE: El-P and Killer Mike of the hip-hop phenominon, Run the Jewels, mash up mediums to deliver socially engaged documentary alongside the premiering of their own original, new music and music videos.</p>
+      </div>
     </div>
   </section>
 
   <section class="cd-section">
     <div>
       <!-- <h2>Section 3</h2> -->
-      <span>
-      	<p>As one of the most powerful and woke hip-hop groups the world has ever seen, Mike and El-P
-		use each one hour episode as a deep exploration of social and political topics close to their hearts. They travel the world to tell the personal stories of the communities, families and individuals most affected by the issues of our time. They meet with luminaries, politicians, celebrities and professionals who spend their lives engaged in the struggle to actively bring about change. 
-	  	</p>
-	  </span>
+      <div id="slide4">
+      	<p class="vid-text">As one of the most powerful and woke hip-hop groups the world has ever seen, Mike and El-P
+		    use each one hour episode as a deep exploration of social and political topics close to their hearts. They travel the world to tell the personal stories of the communities, families and individuals most affected by the issues of our time. They meet with luminaries, politicians, celebrities and professionals who spend their lives engaged in the struggle to actively bring about change. 
+	  	  </p>
+	     </div>
     </div>
   </section>
 
   <section class="cd-section">
     <div>
       <!-- <h2>Section 3</h2> -->
-      <span>
-      	<p>With millions of fans around the globe, staggering critical acclaim, and wildly successful tours, Run the Jewels has a massive, built-in audience. That’s why in their new premium documentary series, will combine their music and visual esthetics (cinematics, animation, etc.) to shed light on their subject matter, draw attention to important topics, and drive album sales. The music and visuals will be designed to integrate seamlessly into the narrative structure of the episodes as a unique, never before seen storytelling element. As well, segments will be designed for cross-platform, social media release. 
-	  	</p>
-	  </span>
+      <div id="slide5">
+        <p class="vid-text">With millions of fans around the globe, staggering critical acclaim, and wildly successful tours, Run the Jewels has a massive, built-in audience. That’s why in their new premium documentary series, will combine their music and visual esthetics (cinematics, animation, etc.) to shed light on their subject matter, draw attention to important topics, and drive album sales. The music and visuals will be designed to integrate seamlessly into the narrative structure of the episodes as a unique, never before seen storytelling element. As well, segments will be designed for cross-platform, social media release. 
+	  	  </p>
+	    </div>
     </div>
   </section>
 
   <section class="cd-section">
     <div>
       <!-- <h2>Section 3</h2> -->
-      <span>
-      	<p>ALTERNATE: Each episode will premiere a new song from their upcoming album along with the corresponding music video in advance of the album’s release. The songs will correlate (obliquely or directly) to the topic/causes the episode centers around. As well, each music video is directed by top artists, production designers, directors, and animators chosen by the band to create high production value events that will simultaneously promote viewership and drive album sales. 
-	  	</p>
-	  </span>
+      <div id="slide6">
+        <p class="vid-text">ALTERNATE: Each episode will premiere a new song from their upcoming album along with the corresponding music video in advance of the album’s release. The songs will correlate (obliquely or directly) to the topic/causes the episode centers around. As well, each music video is directed by top artists, production designers, directors, and animators chosen by the band to create high production value events that will simultaneously promote viewership and drive album sales. 
+	  	  </p>
+	    </div>
     </div>
   </section>
 
@@ -505,31 +601,37 @@
 	<div class="wrapper" style="padding-top: 70px">
 	  <div class="one">
 	  	<iframe src="https://player.vimeo.com/video/249608901?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"  webkitallowfullscreen allowfullscreen mozallowfullscreen></iframe>
-	  	<div class="vid-text">Enhance The Jewels</div>
+	  	<div class="small-vid-text">Enhance The Jewels</div>
 	  </div>
 
 	  <div class="two">
 	  	<iframe src="https://player.vimeo.com/video/249608906?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" ></iframe>
-	  	<div class="vid-text">Fuck You The Jewels</div>
+	  	<div class="small-vid-text">Fuck You The Jewels</div>
 	  </div>
 	  <div class="three">
 	  	<iframe src="https://player.vimeo.com/video/249609059?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">RAP The Jewels</div>
+	  	<div class="small-vid-text">RAP The Jewels</div>
 	  </div>
 	  <div class="four">
 	  	<iframe src="https://player.vimeo.com/video/249609054?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">Climate Change The Jewels</div>
+	  	<div class="small-vid-text">Climate Change The Jewels</div>
 	  </div>
 	  <div class="five">
 	  	<iframe src="https://player.vimeo.com/video/249608910?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">Crowdfund The Jewels</div>
+	  	<div class="small-vid-text">Crowdfund The Jewels</div>
 	  </div>
 	  <div class="six">
 	  	<iframe src="https://player.vimeo.com/video/249608914?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="vid-text">Next The Jewels</div>
+	  	<div class="small-vid-text">Next The Jewels</div>
 	  </div>
 	</div>
+  <!-- <span> -->
+    
+    <div class="small-vid-text">
+      <p style="padding-top: 550px; color: #D2691E !important"><a href="/bizness">The Bizness</a></p>
+    </div>
 
+  <!-- </span> -->
 
 <!-- 	<div class="wrapper">
 	  	<iframe class="one" src="https://player.vimeo.com/video/249608901?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"  ></iframe>

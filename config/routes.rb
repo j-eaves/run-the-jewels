@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'bizness/index' => 'bizness#index'
 
-  get '/show' => 'bizness#show'
+  get 'bizness/' => 'bizness#show'
 
   get 'velocity_parallax/index' => 'velocity_parallax#index'
 

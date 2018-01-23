@@ -1,27 +1,48 @@
 <style>
 
 .content {
-	margin: 0 auto;
-	width: 960px;
+	/*margin: 0 auto;*/
+	/*width: 100vw;*/
+	/*height: 100%;*/
 }
 
 #slide1 {
-	width:100%;
+	
+	/*z-index: 1;*/
 	/*background: url('https://media.giphy.com/media/T5jf3Pa89f5bG/giphy.gif') 50% 0 no-repeat fixed;*/
-	/*background: url('assets/__Business_v03.jpg') 50% 0 no-repeat fixed;*/
-	background-size: cover;
-	background-color: #0000ff;
-	color: #0000ff;
-	height: 600px;
-	/* height was originally 600px */
+	background-image: url('assets/__Business_v04.jpg');
+	object-position: 50% 50%;
+	/*background-position: 50% 50%;*/
+	resize: both;
+  	overflow: scroll;
+  	/*background-size: inherit;*/
+  	background-size: 1920px 3157px;
+	background-repeat: no-repeat;
+	/*background-size: 100% auto;*/
+    background-position: center top;
+    background-attachment: fixed;
+	background-size: contain;
+	object-fit: cover;
+	/*width: 50vw;*/
+	height: 165vh;
+	/*background-color: #0000ff;*/
+	/*color: #0000ff;*/
 	margin: 0;
-	padding: 20px 0;
+	padding: 0 0;
+	
 }
+#slide2 {
+    background: url('assets/LegendHasit_BGstill.jpg') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
 </style>
 
 <!-- <h1>Bizness#show</h1> -->
 
 <div class="content" id="slide1">
-	<p>Hello</p>
-	<%= image_tag 'img-2.jpg' %>
+	<!-- <p>Hello</p> -->
 </div>
