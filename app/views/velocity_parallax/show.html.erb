@@ -68,13 +68,17 @@
   	  vertical-align: middle;
     }*/
     .cd-section p {
-      margin: 0 30em;
+      /*took out the original margin to work with new gif html*/
+      /*margin: 0 30em;*/
+      margin: 0 0;
       padding-left: 4em;
       padding-right: 4em;
       width: 100vw;
       height: 100vh;
       /*line-height: 100vh;*/
-      display: table-cell;
+      /*I commented out the table-cell thing today, Wednesday, Jan 24 for gif text*/
+      /*display: table-cell; can also use block*/
+      display: table-caption; /* can also use block */
       text-align: center;
       font-size: 1.9rem;
       vertical-align: middle;
@@ -395,17 +399,25 @@
   	  text-align: center;
   	}
     .vid-text, p {
-      padding-top: 48vh;
+      /*padding-top: 40vh;*/
       /*color: #267481;*/
       /*color: #fff;*/
-      color: #ff0000;
+      /*color: #ff0000;*/
+      color: #B8860B;
+      opacity: .7;
       text-shadow:
-       -1px -1px 0 #000,  
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-         1px 1px 0 #000;
+       -1.2px -1.2px 0 #000,  
+        1.2px -1.2px 0 #000,
+        -1.2px 1.2px 0 #000,
+         1.2px 1.2px 0 #000;
     }
+    #large-caption {
+      padding-top: 40vh;
+    } 
 
+    #small-caption {
+      padding-top: 70vh;
+    } 
 	/* Responsive layout - makes a two column-layout instead of four columns */
 	/*@media (max-width: 800px) {
 	    .column {
@@ -423,14 +435,23 @@
 	        max-width: 100%;
 	    }
 	}*/
-
+  #slide1 {
+    background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
   #slide2 {
     /*width:100vw;*/
     /*background-color: #fff;*/
 
     /* my modification */
     /*background: url('https://giphy.com/gifs/killer-mike-T5jf3Pa89f5bG') 50% 0 no-repeat fixed;*/
-    background: url('assets/RunTheJewelsOV.gif') 50% 0 no-repeat fixed;
+    /*background: url('assets/RunTheJewelsOV.gif') 50% 0 no-repeat fixed;*/
+    /*background: url('https://giphy.com/gifs/d3OFYNj0jGRgyOc0/html5') 50% 0 no-repeat fixed;*/
+    background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
     background-size: cover;
     /* my modification */
     color: #fff;
@@ -441,7 +462,8 @@
     padding: 0 0;
   }
   #slide3 {
-    background: url('assets/2018-01-21_13h03_34.gif') 50% 0 no-repeat fixed;
+    /*background: url('assets/2018-01-21_13h03_34.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/3oFzm43b7rQYA2K9b2/html5') 50% 0 no-repeat fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
@@ -449,7 +471,8 @@
     padding: 0 0;
   }
   #slide4 {
-    background: url('assets/Ambulance_LOOP.gif') 50% 0 no-repeat fixed;
+    /*background: url('assets/Ambulance_LOOP.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/xULW8jzgBtL67AQLDi/html5') 50% 0 no-repeat fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
@@ -457,7 +480,8 @@
     padding: 0 0;
   }
   #slide5 {
-    background: url('assets/LOOP_Amb03.gif') 50% 0 no-repeat fixed;
+    /*background: url('assets/LOOP_Amb03.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/l49JDZ8avMh7W7VT2/html5') 50% 0 no-repeat fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
@@ -465,7 +489,8 @@
     padding: 0 0;
   }
   #slide6 {
-    background: url('assets/LOOP_Amb04.gif') 50% 0 no-repeat fixed;
+    /*background: url('assets/LOOP_Amb04.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/3oFzmkjP71lDSTz70c/html5') 50% 0 no-repeat fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
@@ -473,7 +498,8 @@
     padding: 0 0;
   }
   #slide7 {
-    background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;
+    /*background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/l49JXo5IWi3vbhEqc/html5') 50% 0 no-repeat fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
@@ -488,6 +514,51 @@
     overflow: hidden;
     padding: 0 0;
   }
+
+  /*Center text over video*/
+  /* Container holding the image and the text */
+  .container {
+      position: relative;
+      text-align: center;
+      /*color: white;*/
+  }
+
+  /* Bottom left text */
+  .bottom-left {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+  }
+
+  /* Top left text */
+  .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+  }
+
+  /* Top right text */
+  .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+  }
+
+  /* Bottom right text */
+  .bottom-right {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+  }
+
+  /* Centered text */
+  .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
 </style>
 
 <!doctype html>
@@ -517,7 +588,7 @@
   <section class="cd-section visible">
     <div>
       <!-- <h2>Page Scroll Effects</h2> -->
-      <iframe class="full-size-frame" src="https://player.vimeo.com/video/250041995?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" webkitallowfullscreen allowfullscreen mozallowfullscreen ><</iframe>
+      <iframe class="full-size-frame" src="https://player.vimeo.com/video/250041995?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" webkitallowfullscreen allowfullscreen mozallowfullscreen ></iframe>
       <!-- <iframe src="https://player.vimeo.com/video/249608901?autoplay=1&loop=1&autopause=0" width="640" height="564" frameborder="0" webkitallowfullscreen allowfullscreen mozallowfullscreen ></iframe> -->
     </div>
     <div>
@@ -527,13 +598,13 @@
   </section>
 
   <section class="cd-section">
-    <div>
-      <div id="slide2">
-      <!-- <h2>Section 2</h2> -->
-      <!-- <h3> THIS IS AN H3 TAG </h3> -->
-      	<p class="vid-text">El-P and Killer Mike of the hip-hop phenominon, Run the Jewels, mash up mediums to deliver socially engaged documentary which seamlessly integrates and features the full canon of their music.</p>
+    <div class="container">
+      <video id="gif-mp4" poster="https://media.giphy.com/media/d3OFYNj0jGRgyOc0/200_s.gif" style="margin:0;padding:0" width="100%" height="auto" autoplay="" loop="">
+            <source src="https://media.giphy.com/media/d3OFYNj0jGRgyOc0/giphy.mp4" type="video/mp4"></video>
+      <div class="centered">
+        <p class="vid-text" id="small-caption">El-P and Killer Mike of the hip-hop phenominon, Run the Jewels, mash up mediums to deliver socially engaged documentary which seamlessly integrates and features the full canon of their music.</p>
       </div>
-  	</div>
+    </div>
   </section>
 
   <section class="cd-section">
@@ -573,6 +644,15 @@
         <p class="vid-text">ALTERNATE: Each episode will premiere a new song from their upcoming album along with the corresponding music video in advance of the album’s release. The songs will correlate (obliquely or directly) to the topic/causes the episode centers around. As well, each music video is directed by top artists, production designers, directors, and animators chosen by the band to create high production value events that will simultaneously promote viewership and drive album sales. 
 	  	  </p>
 	    </div>
+    </div>
+  </section>
+  <section class="cd-section">
+    <div>
+      <!-- <h2>Section 3</h2> -->
+      <div id="slide7">
+        <p class="vid-text">ALTERNATE: Each episode will premiere a new song from their upcoming album along with the corresponding music video in advance of the album’s release. The songs will correlate (obliquely or directly) to the topic/causes the episode centers around. As well, each music video is directed by top artists, production designers, directors, and animators chosen by the band to create high production value events that will simultaneously promote viewership and drive album sales. 
+        </p>
+      </div>
     </div>
   </section>
 
