@@ -30,10 +30,12 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   #This was how the file was set, originally
   # config.assets.compile = false
+
   #This fix was from https://stackoverflow.com/questions/21974190/background-image-not-showing-up-in-heroku
   config.serve_static_files = true
   config.assets.compile = true
-
+  #and now the scrolling arrow shows up in heroku!
+  
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
