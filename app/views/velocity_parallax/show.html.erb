@@ -35,7 +35,8 @@
 
     a {
       /*color: #267481;*/
-      color: #D2691E;
+      /*color: #D2691E;*/
+      color: #FFF8DC;
       /*color: #111;*/
       text-decoration: none;
     }
@@ -387,7 +388,7 @@
       font-family: "Josefin Sans", sans-serif;
       padding-top: 10px;
       text-align: center;
-      color: #ff0000;
+      color: #FFF8DC;
       text-shadow:
        -1px -1px 0 #000,  
         1px -1px 0 #000,
@@ -404,16 +405,17 @@
       /*color: #267481;*/
       /*color: #fff;*/
       /*color: #ff0000;*/
-      color: #B8860B;
+      /*color: #B8860B;*/
+      color: #FFF8DC;
       opacity: .7;
       text-shadow:
-       -1.2px -1.2px 0 #000,  
-        1.2px -1.2px 0 #000,
-        -1.2px 1.2px 0 #000,
-         1.2px 1.2px 0 #000;
+       -1.5px -1.5px 0 #000,  
+        1.5px -1.5px 0 #000,
+        -1.5px 1.5px 0 #000,
+         1.5px 1.5px 0 #000;
     }
     #large-caption {
-      padding-top: 53vh;
+      padding-top: 48vh;
     } 
 
     #small-caption {
@@ -560,6 +562,26 @@
       transform: translate(-50%, -50%);
   }
 
+  /*clickable div and contents*/
+  /* from enora https://stackoverflow.com/questions/796087/make-a-div-into-a-link*/
+
+  div.feature {
+      position: relative;
+  }
+
+  div.feature a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-decoration: none; /* No underlines on the link */
+      z-index: 10; /* Places the link above everything else in the div */
+      background-color: #FFF; /* Fix to make div clickable in IE */
+      opacity: 0; /* Fix to make div clickable in IE */
+      filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+  }
+
 </style>
 
 <!doctype html>
@@ -583,7 +605,7 @@
   <!-- <title>Page Scroll Effects | CodyHouse</title> -->
 </head>
 <!-- hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
-<body data-hijacking="off" data-animation="scaleDown">
+<body data-hijacking="off" data-animation="rotate">
 
   <!-- Landing Page/Jewels Vimeo Video -->
   <section class="cd-section visible">
@@ -656,9 +678,10 @@
   <!-- p5 LOOP_Amb04/Close-up of ambulance tail light -->
    <section class="cd-section">
     <div class="container">
-      <video id="gif-mp4" poster="https://media.giphy.com/media/3oFzmkjP71lDSTz70c/200_s.gif" style="margin:0;padding:0" width="100%" height="auto" autoplay="" loop="">
+      <video id="gif-mp4" poster="https://media.giphy.com/media/3oFzmkjP71lDSTz70c/200_s.gif" style="margin: -5vh 0 0 0; padding:0" width="100%" height="auto" autoplay="" loop="">
             <source src="https://media.giphy.com/media/3oFzmkjP71lDSTz70c/giphy.mp4" type="video/mp4"></video>
-      <div class="centered">
+      <div class="centered" style="top: 50%;
+      left: 50%;" >
         <p class="vid-text" id="large-caption">ALTERNATE: Each episode will premiere a new song from their upcoming album along with the corresponding music video in advance of the album’s release. The songs will correlate (obliquely or directly) to the topic/causes the episode centers around. As well, each music video is directed by top artists, production designers, directors, and animators chosen by the band to create high production value events that will simultaneously promote viewership and drive album sales.</p>
       </div>
     </div>
@@ -747,36 +770,72 @@
 
 	</div> -->
 	<div class="wrapper" style="padding-top: 70px">
+
 	  <div class="one">
-	  	<iframe src="https://player.vimeo.com/video/249608901?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"  webkitallowfullscreen allowfullscreen mozallowfullscreen></iframe>
-	  	<div class="small-vid-text"><a href="enhance/">Enhance The Jewels</a></div>
+      <div class="feature">
+        <a href="enhance/"></a>
+	  	  <iframe src="https://player.vimeo.com/video/249608901?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"  webkitallowfullscreen allowfullscreen mozallowfullscreen></iframe>
+      </div>
+	  	<div class="small-vid-text">
+        <a href="enhance/">Enhance The Jewels</a>
+      </div>
 	  </div>
 
 	  <div class="two">
-	  	<iframe src="https://player.vimeo.com/video/249608906?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" ></iframe>
-	  	<div class="small-vid-text"><a href="fuckyou/">Fuck You The Jewels</a></div>
+      <div class="feature">
+        <a href="fuckyou/"></a>
+	  	  <iframe src="https://player.vimeo.com/video/249608906?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" ></iframe>
+      </div>
+	  	<div class="small-vid-text">
+        <a href="fuckyou/">Fuck You The Jewels</a>
+      </div>
 	  </div>
+
 	  <div class="three">
-	  	<iframe src="https://player.vimeo.com/video/249609059?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="small-vid-text"><a href="rap/">RAP The Jewels</a></div>
+      <div class="feature">
+        <a href="rap/"></a>
+	  	  <iframe src="https://player.vimeo.com/video/249609059?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+      </div>
+	  	<div class="small-vid-text">
+        <a href="rap/">RAP The Jewels</a>
+      </div>
 	  </div>
+
 	  <div class="four">
-	  	<iframe src="https://player.vimeo.com/video/249609054?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="small-vid-text"><a href="climatechange/">Climate Change The Jewels</a></div>
+      <div class="feature">
+        <a href="climatechange/"></a>
+	  	  <iframe src="https://player.vimeo.com/video/249609054?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+      </div>
+	  	<div class="small-vid-text">
+        <a href="climatechange/">Climate Change The Jewels</a>
+      </div>
 	  </div>
+
 	  <div class="five">
-	  	<iframe src="https://player.vimeo.com/video/249608910?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="small-vid-text"><a href="crowdfund/">Crowdfund The Jewels</a></div>
+      <div class="feature">
+        <a href="crowdfund/"></a>
+	  	  <iframe src="https://player.vimeo.com/video/249608910?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+      </div>
+	  	<div class="small-vid-text">
+        <a href="crowdfund/">Crowdfund The Jewels</a>
+      </div>
 	  </div>
+
 	  <div class="six">
-	  	<iframe src="https://player.vimeo.com/video/249608914?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
-	  	<div class="small-vid-text"><a href="next/">Next The Jewels</a></div>
+      <div class="feature">
+        <a href="next/"></a>
+  	     <iframe src="https://player.vimeo.com/video/249608914?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+      </div>
+	  	<div class="small-vid-text">
+        <a href="next/">Next The Jewels</a>
+      </div>
 	  </div>
 	</div>
+
   <!-- <span> -->
     
-    <!-- <div class="small-vid-text">
-      <p style="padding-top: 550px; color: #D2691E !important"><a href="/bizness">The Bizness</a></p>
+   <!--  <div class="small-vid-text">
+      <p style="padding-top: 550px">The Bizness</p>
     </div> -->
 
 
