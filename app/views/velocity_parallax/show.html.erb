@@ -63,11 +63,11 @@
 
     /* ------------------------ */
     .cd-section div {
-      /*text-align: center;	*/
+      /*text-align: center; */
     }
     /*.cd-section span {
       display: table-cell;
-  	  vertical-align: middle;
+      vertical-align: middle;
     }*/
     .cd-section p {
       /*took out the original margin to work with new gif html*/
@@ -88,7 +88,7 @@
     }
     /*.cd-section iframe { */
     .full-size-frame {
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       vertical-align: middle;
       padding: 2vh 0;
@@ -330,61 +330,61 @@
     /* Video Grid Styling */
 
     .wrapper > div {
-  	  border: 5;  solid rgb(233,171,88); 
-  	  border-radius: 0;
-  	  /*background-color: rgba(0,0,0,0.1);*/
-  	  background-color: rgba(0,0,0,0.0);
+      border: 5  solid rgb(233,171,88); 
+      border-radius: 0;
+      /*background-color: rgba(0,0,0,0.1);*/
+      background-color: rgba(0,0,0,0.0);
       /*padding below is just for the tops of all vids*/
-  	  padding: 2vh 0;
-  	  vertical-align: middle;
-  	  /*text-align: center;*/
-  	}
-  	.wrapper {
-  	  display: grid;
-  	  grid-template-columns: repeat(3, 1fr);
-  	  grid-gap: 1px;
-  	  grid-auto-rows: minmax(230px, auto);
+      padding: 2vh 0;
+      vertical-align: middle;
+      /*text-align: center;*/
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1px;
+      grid-auto-rows: minmax(230px, auto);
       /*padding below is to bring vids closer together*/
       padding : 1vh 10vw;
-  	}
-  	.wrapper iframe {
-  		/*width: 300px;*/
-  		width: 25vw;
-  		height: 25vh;
-  	}
-  	.one {
-  	  grid-column: 1;
-  	  grid-row: 1;
-  	  text-align: center;
-  	}
-  	.two { 
-  	  grid-column: 2;
-  	  grid-row: 1;
-  	  text-align: center;
-  	}
-  	.three {
-  	  grid-column: 3;
-  	  grid-row: 1;
-  	  text-align: center;
-  	}
-  	.four {
-  	  grid-column: 1;
-  	  grid-row: 2;
-  	  text-align: center;
-  	}
-  	.five {
-  	  grid-column: 2;
-  	  grid-row: 2;
-  	  text-align: center;
-  	}
-  	.six {
-  	  grid-column: 3;
-  	  grid-row: 2;
-  	  text-align: center;
-  	}
+    }
+    .wrapper iframe {
+      /*width: 300px;*/
+      width: 25vw;
+      height: 25vh;
+    }
+    .one {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: center;
+    }
+    .two { 
+      grid-column: 2;
+      grid-row: 1;
+      text-align: center;
+    }
+    .three {
+      grid-column: 3;
+      grid-row: 1;
+      text-align: center;
+    }
+    .four {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+    .five {
+      grid-column: 2;
+      grid-row: 2;
+      text-align: center;
+    }
+    .six {
+      grid-column: 3;
+      grid-row: 2;
+      text-align: center;
+    }
 
     /*@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);*/
-  	.small-vid-text {
+    .small-vid-text {
       font-family: "Josefin Sans", sans-serif;
       padding-top: 10px;
       text-align: center;
@@ -397,9 +397,9 @@
     }
     .vid-text {
       font-family: "Josefin Sans", sans-serif;
-  	  padding-top: 10px;
-  	  text-align: center;
-  	}
+      padding-top: 10px;
+      text-align: center;
+    }
     .vid-text, p {
       /*padding-top: 40vh;*/
       /*color: #267481;*/
@@ -421,176 +421,198 @@
     #small-caption {
       padding-top: 70vh;
     } 
-	/* Responsive layout - makes a two column-layout instead of four columns */
-	/*@media (max-width: 800px) {
-	    .column {
-	        -ms-flex: 50%;
-	        flex: 50%;
-	        max-width: 50%;
-	    }
-	}*/
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    /*@media (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }*/
 
-	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-	/*@media (max-width: 600px) {
-	    .column {
-	        -ms-flex: 100%;
-	        flex: 100%;
-	        max-width: 100%;
-	    }
-	}*/
-  #slide1 {
-    background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    overflow: hidden;
-    padding: 0 0;
-  }
-  #slide2 {
-    /*width:100vw;*/
-    /*background-color: #fff;*/
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    /*@media (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }*/
+    #slide1 {
+      background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 0;
+    }
+    #slide2 {
+      /*width:100vw;*/
+      /*background-color: #fff;*/
 
-    /* my modification */
-    /*background: url('https://giphy.com/gifs/killer-mike-T5jf3Pa89f5bG') 50% 0 no-repeat fixed;*/
-    /*background: url('assets/RunTheJewelsOV.gif') 50% 0 no-repeat fixed;*/
-    /*background: url('https://giphy.com/gifs/d3OFYNj0jGRgyOc0/html5') 50% 0 no-repeat fixed;*/
-    background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
-    background-size: cover;
-    /* my modification */
-    color: #fff;
-    /*height: 100vh;*/
-    margin: 0;
-    overflow: hidden;
-    /*padding: 300px 0;*/
-    padding: 0 0;
-  }
-  #slide3 {
-    /*background: url('assets/2018-01-21_13h03_34.gif') 50% 0 no-repeat fixed;*/
-    background: url('https://giphy.com/gifs/3oFzm43b7rQYA2K9b2/html5') 50% 0 no-repeat fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    overflow: hidden;
-    padding: 0 0;
-  }
-  #slide4 {
-    /*background: url('assets/Ambulance_LOOP.gif') 50% 0 no-repeat fixed;*/
-    background: url('https://giphy.com/gifs/xULW8jzgBtL67AQLDi/html5') 50% 0 no-repeat fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    overflow: hidden;
-    padding: 0 0;
-  }
-  #slide5 {
-    /*background: url('assets/LOOP_Amb03.gif') 50% 0 no-repeat fixed;*/
-    background: url('https://giphy.com/gifs/l49JDZ8avMh7W7VT2/html5') 50% 0 no-repeat fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    overflow: hidden;
-    padding: 0 0;
-  }
-  #slide6 {
-    /*background: url('assets/LOOP_Amb04.gif') 50% 0 no-repeat fixed;*/
-    background: url('https://giphy.com/gifs/3oFzmkjP71lDSTz70c/html5') 50% 0 no-repeat fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    overflow: hidden;
-    padding: 0 0;
-  }
-  #slide7 {
-    /*background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;*/
-    background: url('https://giphy.com/gifs/l49JXo5IWi3vbhEqc/html5') 50% 0 no-repeat fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    overflow: hidden;
-    padding: 0 0;
-  }
-  #slide8 {
-    background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    overflow: hidden;
-    padding: 0 0;
-  }
+      /* my modification */
+      /*background: url('https://giphy.com/gifs/killer-mike-T5jf3Pa89f5bG') 50% 0 no-repeat fixed;*/
+      /*background: url('assets/RunTheJewelsOV.gif') 50% 0 no-repeat fixed;*/
+      /*background: url('https://giphy.com/gifs/d3OFYNj0jGRgyOc0/html5') 50% 0 no-repeat fixed;*/
+      background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
+      background-size: cover;
+      /* my modification */
+      color: #fff;
+      /*height: 100vh;*/
+      margin: 0;
+      overflow: hidden;
+      /*padding: 300px 0;*/
+      padding: 0 0;
+    }
+    #slide3 {
+      /*background: url('assets/2018-01-21_13h03_34.gif') 50% 0 no-repeat fixed;*/
+      background: url('https://giphy.com/gifs/3oFzm43b7rQYA2K9b2/html5') 50% 0 no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 0;
+    }
+    #slide4 {
+      /*background: url('assets/Ambulance_LOOP.gif') 50% 0 no-repeat fixed;*/
+      background: url('https://giphy.com/gifs/xULW8jzgBtL67AQLDi/html5') 50% 0 no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 0;
+    }
+    #slide5 {
+      /*background: url('assets/LOOP_Amb03.gif') 50% 0 no-repeat fixed;*/
+      background: url('https://giphy.com/gifs/l49JDZ8avMh7W7VT2/html5') 50% 0 no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 0;
+    }
+    #slide6 {
+      /*background: url('assets/LOOP_Amb04.gif') 50% 0 no-repeat fixed;*/
+      background: url('https://giphy.com/gifs/3oFzmkjP71lDSTz70c/html5') 50% 0 no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 0;
+    }
+    #slide7 {
+      /*background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;*/
+      background: url('https://giphy.com/gifs/l49JXo5IWi3vbhEqc/html5') 50% 0 no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 0;
+    }
+    #slide8 {
+      background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 0;
+    }
 
-  /*Center text over video*/
-  /* Container holding the image and the text */
-  .container {
-      position: relative;
-      text-align: center;
-      /*color: white;*/
-  }
+    /*Center text over video*/
+    /* Container holding the image and the text */
+    .container {
+        position: relative;
+        text-align: center;
+        /*color: white;*/
+    }
 
-  /* Bottom left text */
-  .bottom-left {
-      position: absolute;
-      bottom: 8px;
-      left: 16px;
-  }
+    /* Bottom left text */
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+    }
 
-  /* Top left text */
-  .top-left {
-      position: absolute;
-      top: 8px;
-      left: 16px;
-  }
+    /* Top left text */
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
 
-  /* Top right text */
-  .top-right {
-      position: absolute;
-      top: 8px;
-      right: 16px;
-  }
+    /* Top right text */
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
 
-  /* Bottom right text */
-  .bottom-right {
-      position: absolute;
-      bottom: 8px;
-      right: 16px;
-  }
+    /* Bottom right text */
+    .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
 
-  /* Centered text */
-  .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-  /*clickable div and contents*/
-  /* from enora https://stackoverflow.com/questions/796087/make-a-div-into-a-link*/
+    /*clickable div and contents*/
+    /* from enora https://stackoverflow.com/questions/796087/make-a-div-into-a-link*/
 
-  div.feature {
-      position: relative;
-  }
+    div.feature {
+        position: relative;
+    }
 
-  div.feature a {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      text-decoration: none; /* No underlines on the link */
-      z-index: 10; /* Places the link above everything else in the div */
-      background-color: #FFF; /* Fix to make div clickable in IE */
-      opacity: 0; /* Fix to make div clickable in IE */
-      filter: alpha(opacity=1); /* Fix to make div clickable in IE */
-  }
+    div.feature a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-decoration: none; /* No underlines on the link */
+        z-index: 10; /* Places the link above everything else in the div */
+        background-color: #FFF; /* Fix to make div clickable in IE */
+        opacity: 0; /* Fix to make div clickable in IE */
+        filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+    }
 
-  /*center a div and it's contents horizontally and vertically*/
+    /*center a div and it's contents horizontally and vertically*/
+    /*https://stackoverflow.com/questions/953918/how-to-align-a-div-to-the-middle-horizontally-width-of-the-page*/
+    .div-container {
+      display: flex;
+      justify-content: center;
+    }
+    .div-center {
+      width: 100vw;
+    }
+    /*Placeholder image for loading videos*/
+    /*https://stackoverflow.com/questions/8626638/how-to-display-loading-message-when-an-iframe-is-loading*/
+    .holds-the-iframe {
+      /*background:url('assets/RunTheJewels.jpg') center center no-repeat;*/
+      background:url('assets/LegendHasIt_BGstill.jpg') center center no-repeat;
+    }
 
-  .div-container {
-    display: flex;
-    justify-content: center;
-  }
-  .div-center {
-    width: 100vw;
-  }
+    .iframe-placeholder {
+      background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="%23FF0000" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">Video Loading</text></svg>') 0px 0px no-repeat;
+    }
+    /*#loadImg {
+      position:absolute;
+      z-index:999;
+    }
+    #loadImg div {
+      display: table-cell;
+      width:200px;
+      height:200px;
+      background:#fff;
+      text-align:center;
+      vertical-align:middle;
+    }*/
 
 </style>
 
@@ -619,7 +641,7 @@
 
   <!-- Landing Page/Jewels Vimeo Video -->
   <section class="cd-section visible">
-    <div>
+    <div class="iframe-placeholder">
       <!-- <h2>Page Scroll Effects</h2> -->
       <iframe class="full-size-frame" src="https://player.vimeo.com/video/250041995?background=1?autoplay=1&loop=1&autopause=1" style="margin:0;padding:0"  frameborder="0" webkitallowfullscreen allowfullscreen mozallowfullscreen ></iframe>
       <!-- <iframe src="https://player.vimeo.com/video/249608901?autoplay=1&loop=1&autopause=0" width="640" height="564" frameborder="0" webkitallowfullscreen allowfullscreen mozallowfullscreen ></iframe> -->
@@ -681,7 +703,7 @@
   <!-- p5 LOOP_Amb04/Close-up of ambulance tail light -->
    <section class="cd-section">
     <div class="container">
-      <video id="gif-mp4" poster="https://media.giphy.com/media/3oFzmkjP71lDSTz70c/200_s.gif" style="margin: -5vh 0 0 0; padding:0" width="100%" height="auto" autoplay="" loop="">
+      <video id="gif-mp4" poster="https://media.giphy.com/media/3oFzmkjP71lDSTz70c/200_s.gif" style="margin: 0 0 0 0; padding:0" width="100%" height="auto" autoplay="" loop="">
         <source src="https://media.giphy.com/media/3oFzmkjP71lDSTz70c/giphy.mp4" type="video/mp4">
       </video>
       <div class="centered" style="top: 50%;
@@ -790,7 +812,7 @@
     	  <div class="one">
           <div class="feature">
             <a href="enhance/"></a>
-    	  	  <iframe src="https://player.vimeo.com/video/249608901?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"  webkitallowfullscreen allowfullscreen mozallowfullscreen></iframe>
+    	  	  <iframe src="https://player.vimeo.com/video/249608901?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" class="iframe-placeholder"></iframe>
           </div>
     	  	<!-- <div class="small-vid-text">
             <a href="enhance/">Enhance The Jewels</a>
@@ -800,7 +822,7 @@
     	  <div class="two">
           <div class="feature">
             <a href="fuckyou/"></a>
-    	  	  <iframe src="https://player.vimeo.com/video/249608906?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" ></iframe>
+    	  	  <iframe src="https://player.vimeo.com/video/249608906?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" class="iframe-placeholder"></iframe>
           </div>
     	  	<!-- <div class="small-vid-text">
             <a href="fuckyou/">Fuck You The Jewels</a>
@@ -810,7 +832,7 @@
     	  <div class="three">
           <div class="feature">
             <a href="rap/"></a>
-    	  	  <iframe src="https://player.vimeo.com/video/249609059?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+    	  	  <iframe src="https://player.vimeo.com/video/249609059?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" class="iframe-placeholder"></iframe>
           </div>
     	  	<!-- <div class="small-vid-text">
             <a href="rap/">RAP The Jewels</a>
@@ -820,7 +842,7 @@
     	  <div class="four">
           <div class="feature">
             <a href="climatechange/"></a>
-    	  	  <iframe src="https://player.vimeo.com/video/249609054?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+    	  	  <iframe src="https://player.vimeo.com/video/249609054?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" class="iframe-placeholder"></iframe>
           </div>
     	  	<!-- <div class="small-vid-text">
             <a href="climatechange/">Climate Change The Jewels</a>
@@ -830,7 +852,7 @@
     	  <div class="five">
           <div class="feature">
             <a href="crowdfund/"></a>
-    	  	  <iframe src="https://player.vimeo.com/video/249608910?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+    	  	  <iframe src="https://player.vimeo.com/video/249608910?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" class="iframe-placeholder"></iframe>
           </div>
     	  	<!-- <div class="small-vid-text">
             <a href="crowdfund/">Crowdfund The Jewels</a>
@@ -840,7 +862,7 @@
     	  <div class="six">
           <div class="feature">
             <a href="next/"></a>
-      	     <iframe src="https://player.vimeo.com/video/249608914?background=1?autoplay=1&loop=1&autopause=1" frameborder="0"></iframe>
+      	     <iframe src="https://player.vimeo.com/video/249608914?background=1?autoplay=1&loop=1&autopause=1" frameborder="0" class="iframe-placeholder"></iframe>
           </div>
     	  	<!-- <div class="small-vid-text">
             <a href="next/">Next The Jewels</a>

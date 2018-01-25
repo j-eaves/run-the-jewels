@@ -1,0 +1,605 @@
+// Place all the styles related to the velocity_parallax controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+    /* --------------------------------
+
+    Primary style
+
+    -------------------------------- */
+    *, *::after, *::before {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-size: 1.6rem;
+      font-family: "Open Sans", sans-serif;
+      color: #ffffff;
+      /*background-color: #22283f;*/
+      background-color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body::before {
+      /* never visible - this is used in jQuery to check the current MQ */
+      content: 'mobile';
+      display: none;
+    }
+    @media only screen and (min-width: 1050px) {
+      body::before {
+        /* never visible - this is used in jQuery to check the current MQ */
+        content: 'desktop';
+      }
+    }
+
+    a {
+      /*color: #267481;*/
+      /*color: #D2691E;*/
+      color: #FFF8DC;
+      /*color: #111;*/
+      text-decoration: none;
+    }
+
+    /* --------------------------------
+
+    Main Components
+
+    -------------------------------- */
+    @media only screen and (min-width: 1050px) {
+      body[data-hijacking="on"] {
+        overflow: hidden;
+      }
+    }
+
+    .cd-section {
+      height: 100vh;
+    }
+    .cd-section h2 {
+      line-height: 100vh;
+      text-align: center;
+      font-size: 2.4rem;
+    }
+
+    /* ------------------------ */
+    .cd-section div {
+      /*text-align: center;	*/
+    }
+    /*.cd-section span {
+      display: table-cell;
+  	  vertical-align: middle;
+    }*/
+    .cd-section p {
+      /*took out the original margin to work with new gif html*/
+      /*margin: 0 30em;*/
+      margin: 0 0;
+      padding-left: 4em;
+      padding-right: 4em;
+      width: 100vw;
+      height: 100vh;
+      /*line-height: 100vh;*/
+      /*I commented out the table-cell thing today, Wednesday, Jan 24 for gif text*/
+      /*display: table-cell; can also use block*/
+      display: table-caption; /* can also use block */
+      text-align: center;
+      font-size: 1.9rem;
+      vertical-align: middle;
+      z-index: 1;
+    }
+    /*.cd-section iframe { */
+    .full-size-frame {
+      width: 100%;
+      height: 100vh;
+      vertical-align: middle;
+      padding: 2vh 0;
+    }
+    /* ------------------------ */
+
+    .cd-section:first-of-type > div {
+      /*background-color: #2b334f;*/
+    }
+    .cd-section:first-of-type > div::before {
+      /* alert -> all scrolling effects are not visible on small devices */
+      content: 'Effects not visible on mobile!';
+      position: absolute;
+      width: 130%;
+      text-align: center;
+      top: 10px;
+      z-index: 2;
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      /*color: #6a7083;*/
+    }
+    .cd-section:nth-of-type(2) > div {
+      /*background-color: #2e5367;*/
+    }
+    .cd-section:nth-of-type(3) > div {
+      /*background-color: #267481;*/
+    }
+    .cd-section:nth-of-type(4) > div {
+      /*background-color: #fcb052;*/
+    }
+    .cd-section:nth-of-type(5) > div {
+      /*background-color: #f06a59;*/
+    }
+    .cd-section:nth-of-type(6) > div {
+      /*background-color: #f06a59;*/
+    }
+    .cd-section:nth-of-type(7) > div {
+      /*The arrow needs to clear the top of the images*/
+      margin-top: 5vh;
+      /*background-color: #f06a59;*/
+    }
+    [data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    [data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
+      background-image: url("assets/img-1.jpg");
+    }
+    [data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
+      background-image: url("assets/img-1.jpg");
+    }
+    [data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
+      background-image: url("img-3.jpg");
+    }
+    [data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
+      background-image: url("../images/img-4.jpg");
+    }
+    [data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
+      background-image: url("../images/img-5.jpg");
+    }
+    @media only screen and (min-width: 1050px) {
+      .cd-section h2 {
+        font-size: 4rem;
+        font-weight: 300;
+      }
+      [data-hijacking="on"] .cd-section {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      [data-hijacking="on"] .cd-section > div {
+        visibility: visible;
+      }
+      [data-hijacking="off"] .cd-section > div {
+        opacity: 0;
+      }
+      [data-animation="rotate"] .cd-section {
+        /* enable a 3D-space for children elements */
+        -webkit-perspective: 1800px;
+        -moz-perspective: 1800px;
+        perspective: 1800px;
+      }
+      [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
+        -webkit-perspective-origin: center 0;
+        -moz-perspective-origin: center 0;
+        perspective-origin: center 0;
+      }
+      [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
+        /*box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);*/
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+      }
+      [data-animation="opacity"] .cd-section.visible > div {
+        z-index: 1;
+      }
+    }
+
+    @media only screen and (min-width: 1050px) {
+      .cd-section:first-of-type > div::before {
+        display: none;
+      }
+    }
+    @media only screen and (min-width: 1050px) {
+      .cd-section > div {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* Force Hardware Acceleration */
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      [data-hijacking="on"] .cd-section > div {
+        position: absolute;
+      }
+      [data-animation="rotate"] .cd-section > div {
+        -webkit-transform-origin: center bottom;
+        -moz-transform-origin: center bottom;
+        -ms-transform-origin: center bottom;
+        -o-transform-origin: center bottom;
+        transform-origin: center bottom;
+      }
+    }
+
+    .cd-vertical-nav {
+      /* lateral navigation */
+      position: fixed;
+      z-index: 1; /* stays on top/front of everythng shown */
+      /*right: 3%;*/
+      /*right: 3%;*/
+      right: 49%;
+      /* change right to 50% from 3% to move to vertical center of page */
+      /*top: 50%;*/
+      top: 40%;
+      /* change top to 90% from 50% to move to bottom of page */
+      bottom: auto;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      display: none;
+    }
+    .cd-vertical-nav a {
+      display: block;
+      height: 40px;
+      width: 40px;
+      /* image replace */
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      background: url('/assets/down-arrow.svg') no-repeat center center;
+    }
+    .cd-vertical-nav a.cd-prev {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+      margin-top: 20vh;
+      /*margin-bottom: 10px;*/
+      margin-bottom: 80vh;
+      /* change margin-bottom to 85vh; from 10px; to place at top and bottom of page */
+    }
+    .cd-vertical-nav a.inactive {
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+      -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+      transition: opacity 0.2s 0s, visibility 0s 0.2s;
+    }
+    @media only screen and (min-width: 1050px) {
+      .cd-vertical-nav {
+        display: block;
+      }
+    }
+    /* resets */
+
+    /* http://meyerweb.com/eric/tools/css/reset/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section, main {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+
+
+    /* Video Grid Styling */
+
+    .wrapper > div {
+  	  border: 5  solid rgb(233,171,88); 
+  	  border-radius: 0;
+  	  /*background-color: rgba(0,0,0,0.1);*/
+  	  background-color: rgba(0,0,0,0.0);
+      /*padding below is just for the tops of all vids*/
+  	  padding: 2vh 0;
+  	  vertical-align: middle;
+  	  /*text-align: center;*/
+  	}
+  	.wrapper {
+  	  display: grid;
+  	  grid-template-columns: repeat(3, 1fr);
+  	  grid-gap: 1px;
+  	  grid-auto-rows: minmax(230px, auto);
+      /*padding below is to bring vids closer together*/
+      padding : 1vh 10vw;
+  	}
+  	.wrapper iframe {
+  		/*width: 300px;*/
+  		width: 25vw;
+  		height: 25vh;
+  	}
+  	.one {
+  	  grid-column: 1;
+  	  grid-row: 1;
+  	  text-align: center;
+  	}
+  	.two { 
+  	  grid-column: 2;
+  	  grid-row: 1;
+  	  text-align: center;
+  	}
+  	.three {
+  	  grid-column: 3;
+  	  grid-row: 1;
+  	  text-align: center;
+  	}
+  	.four {
+  	  grid-column: 1;
+  	  grid-row: 2;
+  	  text-align: center;
+  	}
+  	.five {
+  	  grid-column: 2;
+  	  grid-row: 2;
+  	  text-align: center;
+  	}
+  	.six {
+  	  grid-column: 3;
+  	  grid-row: 2;
+  	  text-align: center;
+  	}
+
+    /*@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);*/
+  	.small-vid-text {
+      font-family: "Josefin Sans", sans-serif;
+      padding-top: 10px;
+      text-align: center;
+      color: #FFF8DC;
+      text-shadow:
+       -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+    }
+    .vid-text {
+      font-family: "Josefin Sans", sans-serif;
+  	  padding-top: 10px;
+  	  text-align: center;
+  	}
+    .vid-text, p {
+      /*padding-top: 40vh;*/
+      /*color: #267481;*/
+      /*color: #fff;*/
+      /*color: #ff0000;*/
+      /*color: #B8860B;*/
+      color: #FFF8DC;
+      opacity: .7;
+      text-shadow:
+       -1.5px -1.5px 0 #000,  
+        1.5px -1.5px 0 #000,
+        -1.5px 1.5px 0 #000,
+         1.5px 1.5px 0 #000;
+    }
+    #large-caption {
+      padding-top: 48vh;
+    } 
+
+    #small-caption {
+      padding-top: 70vh;
+    } 
+	/* Responsive layout - makes a two column-layout instead of four columns */
+	/*@media (max-width: 800px) {
+	    .column {
+	        -ms-flex: 50%;
+	        flex: 50%;
+	        max-width: 50%;
+	    }
+	}*/
+
+	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+	/*@media (max-width: 600px) {
+	    .column {
+	        -ms-flex: 100%;
+	        flex: 100%;
+	        max-width: 100%;
+	    }
+	}*/
+  #slide1 {
+    background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide2 {
+    /*width:100vw;*/
+    /*background-color: #fff;*/
+
+    /* my modification */
+    /*background: url('https://giphy.com/gifs/killer-mike-T5jf3Pa89f5bG') 50% 0 no-repeat fixed;*/
+    /*background: url('assets/RunTheJewelsOV.gif') 50% 0 no-repeat fixed;*/
+    /*background: url('https://giphy.com/gifs/d3OFYNj0jGRgyOc0/html5') 50% 0 no-repeat fixed;*/
+    background: url('http://gph.is/2nbamPo') 50% 0 no-repeat fixed;
+    background-size: cover;
+    /* my modification */
+    color: #fff;
+    /*height: 100vh;*/
+    margin: 0;
+    overflow: hidden;
+    /*padding: 300px 0;*/
+    padding: 0 0;
+  }
+  #slide3 {
+    /*background: url('assets/2018-01-21_13h03_34.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/3oFzm43b7rQYA2K9b2/html5') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide4 {
+    /*background: url('assets/Ambulance_LOOP.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/xULW8jzgBtL67AQLDi/html5') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide5 {
+    /*background: url('assets/LOOP_Amb03.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/l49JDZ8avMh7W7VT2/html5') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide6 {
+    /*background: url('assets/LOOP_Amb04.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/3oFzmkjP71lDSTz70c/html5') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide7 {
+    /*background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;*/
+    background: url('https://giphy.com/gifs/l49JXo5IWi3vbhEqc/html5') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+  #slide8 {
+    background: url('assets/LOOP_Amb06.gif') 50% 0 no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0;
+  }
+
+  /*Center text over video*/
+  /* Container holding the image and the text */
+  .container {
+      position: relative;
+      text-align: center;
+      /*color: white;*/
+  }
+
+  /* Bottom left text */
+  .bottom-left {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+  }
+
+  /* Top left text */
+  .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+  }
+
+  /* Top right text */
+  .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+  }
+
+  /* Bottom right text */
+  .bottom-right {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+  }
+
+  /* Centered text */
+  .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  /*clickable div and contents*/
+  /* from enora https://stackoverflow.com/questions/796087/make-a-div-into-a-link*/
+
+  div.feature {
+      position: relative;
+  }
+
+  div.feature a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-decoration: none; /* No underlines on the link */
+      z-index: 10; /* Places the link above everything else in the div */
+      background-color: #FFF; /* Fix to make div clickable in IE */
+      opacity: 0; /* Fix to make div clickable in IE */
+      filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+  }
+
+  /*center a div and it's contents horizontally and vertically*/
+  /*https://stackoverflow.com/questions/953918/how-to-align-a-div-to-the-middle-horizontally-width-of-the-page*/
+  .div-container {
+    display: flex;
+    justify-content: center;
+  }
+  .div-center {
+    width: 100vw;
+  }
+  /*Placeholder image for loading videos*/
+  /*https://stackoverflow.com/questions/8626638/how-to-display-loading-message-when-an-iframe-is-loading*/
+  .holds-the-iframe {
+    /*background:url('assets/RunTheJewels.jpg') center center no-repeat;*/
+    background:url('assets/LegendHasIt_BGstill.jpg') center center no-repeat;
+  }
+
+  .iframe-placeholder {
+    background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="%23FF0000" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">Video Loading</text></svg>') 0px 0px no-repeat;
+  }
