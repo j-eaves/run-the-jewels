@@ -6,7 +6,10 @@ application up and running.
 Things you may want to cover:
 
 # run-the-jewels
-A new revised app for a television show proposal
+
+# A new revised app for a television show proposal
+
+#Scrolling from https://codyhouse.co/gem/page-scroll-effects/
 
 * Ruby version
 
